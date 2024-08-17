@@ -1,0 +1,55 @@
+body{
+    background-image: url("images/table.png");
+    background-size: cover;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    width: 95%;
+    height: 100vh;
+    justify-content: center;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+}
+
+h1{
+    color: goldenrod;
+}
+
+#message-el{
+    font-style: italic;
+}
+
+button {
+    width: 150px;
+    background: rgb(218, 165, 32);
+    color: #016f32;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: none;
+    border-radius: 2px;
+    font-weight: bold;
+    margin: 2px;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+button:hover{
+    background: rgb(208, 155, 22);
+}
+
+#clear-game{
+    background-color: red;
+    color: white;
+}
