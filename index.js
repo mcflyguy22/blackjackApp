@@ -1,3 +1,5 @@
+//push(); pop(); unshift(); shift(); <- ways to insert/delete 1st and last indexed items from arrays
+
 //arrays
 let cards = [] //empty array - ordered list of items
 let sum = 0;
@@ -6,8 +8,13 @@ let sum = 0;
 // key/value pairs
 let player = {
     name: "Martin",
-    chips: 145
+    chips: 145,
+    sayHello: function() {
+        alert("Hello " + player.name + "!")
+    }
 }
+
+player.sayHello()
 
 //States
 let hasBlackJack = false;
@@ -26,6 +33,7 @@ playerEl.textContent = player["name"] + ": $" + player["chips"]
 // let sumEl = document.querySelector(".sum-el")
 
 function getRandomCard() {
+    // random generation
     num = Math.floor(Math.random() * 13) + 1;
     console.log(num)
     if (num === 1) {
