@@ -53,3 +53,47 @@ button:hover{
     background-color: red;
     color: white;
 }
+
+.form{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    align-items: center;
+    padding: 2px;
+}
+
+#name{
+    border: 1px solid gray;
+    border-radius: 4px;
+    width: 50%;
+    height: 1.5rem;
+    background: rgb(218, 165, 32, 0.5);
+}
+
+#name:hover{
+    background: rgb(198, 145, 12, 0.5);
+}
+
+#name:focus{
+    background: white;
+
+}
+
+::placeholder{
+    color: rgba(0, 0, 0, 0.651);
+    font-style: italic;
+    font-size: x-small;
+}
+
+/* #submit-button{
+    width: 150px;
+    background: rgb(218, 165, 32);
+    color: #016f32;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: none;
+    border-radius: 2px;
+    font-weight: bold;
+    margin: 2px;
+} */

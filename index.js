@@ -6,15 +6,21 @@ let sum = 0;
 
 //objects store data in-depth - composite / complex data type
 // key/value pairs
+
+let playerEl = document.getElementById("player-el")
+
 let player = {
-    name: "Martin",
+    name: "",
     chips: 145,
-    sayHello: function() {
-        alert("Hello " + player.name + "!")
-    }
 }
 
-player.sayHello()
+function displayName() {
+    player.name = document.getElementById("name").value;
+    playerEl.textContent = player["name"] + ": $" + player["chips"]
+
+    alert("Hello " + player.name + "! You have $145 now.")
+}
+
 
 //States
 let hasBlackJack = false;
@@ -25,10 +31,8 @@ let message = "";
 let messageEl = document.getElementById("message-el");
 let cardsEl = document.getElementById("cards-el");
 let sumEl = document.getElementById("sum-el");
-let playerEl = document.getElementById("player-el")
 
 // calling object dict values can also use player.name & player.chips
-playerEl.textContent = player["name"] + ": $" + player["chips"]
 
 // let sumEl = document.querySelector(".sum-el")
 
@@ -46,13 +50,17 @@ function getRandomCard() {
 }
 
 function startGame() {
-    isAlive = true;
-    let firstCard = getRandomCard()
-    let secondCard = getRandomCard()
-    cards.push(firstCard)
-    cards.push(secondCard)
-    sum = firstCard + secondCard
-    renderGame();
+    if (player.name === '') {
+        alert("Please enter your name.")
+    } else {
+        isAlive = true;
+        let firstCard = getRandomCard()
+        let secondCard = getRandomCard()
+        cards.push(firstCard)
+        cards.push(secondCard)
+        sum = firstCard + secondCard
+        renderGame();
+    }
 }
 
 function renderGame() {
