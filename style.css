@@ -63,10 +63,22 @@ button:hover{
     padding: 2px;
 }
 
+.form button{
+    width: 80px;
+    background: rgb(218, 165, 32);
+    color: #016f32;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: none;
+    border-radius: 2px;
+    font-weight: bold;
+    margin: 2px;
+}
+
 #name{
     border: 1px solid gray;
     border-radius: 4px;
-    width: 50%;
+    width: 25%;
     height: 1.5rem;
     background: rgb(218, 165, 32, 0.5);
 }

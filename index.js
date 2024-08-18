@@ -52,6 +52,10 @@ function getRandomCard() {
 function startGame() {
     if (player.name === '') {
         alert("Please enter your name.")
+    } else if (sum > 0 && sum < 21) {
+        alert("Deal a New Card or Clear Game to Play Again!")
+    } else if (sum >= 21) {
+        alert("Clear game and Start Game to Play Again!")
     } else {
         isAlive = true;
         let firstCard = getRandomCard()
@@ -110,6 +114,9 @@ function newCard() {
 }
 
 function clearCards() {
-    location.reload()
+    cards = [];
+    sum = 0;
+    cardsEl.textContent = "";
+    sumEl.textContent = "";
 }
 
